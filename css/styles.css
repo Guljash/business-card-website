@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+a{
+    color: inherit;
+}
+
+a:visited{
+    color: inherit;
+}
+
+/* about */
+
+.about-wrapper{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 2fr 1.2fr;
+    background-color: #FCD400;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.about-wrapper__text{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-wrapper__photo{
+    display: flex;
+    align-items: flex-end;
+}
+
+.about-wrapper__photo img{
+    width: 100%;
+}
+
+.about-wrapper__text__name{
+    position: relative;
+    margin-top: 6vh;
+    margin-left:6vw;
+    font-weight: 900;
+    font-size: 5vw;
+}
+ 
+.about-wrapper__text__birth{
+    position: relative;
+    margin-left:6vw;
+    font-weight: 500;
+    font-size: 2.5vw;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+ .about-wrapper__text__about{
+    position: relative;
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin: 5vh 0 0 6vw;
+}
+
+.about-wrapper__text__about ul{
+    list-style-position: inside;
+}
+
+.about-wrapper__text__links{
+    font-size: 2vw;
+    font-weight: 400;
+    margin-left:4vw;
+    margin-top: auto;
+    margin-bottom: 1vh;
+}
+
+.about-wrapper__text__links span{
+    margin-left: 2vw;
+    text-decoration: underline;
+}
+
+/* projects */
+
+.projects-wrapper{
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(5, auto);;
+    grid-template-columns: 50vw 1fr;
+    grid-template-areas: 
+    "title title"
+    "cash cash"
+    "cash cash"
+    "losses social"
+    "losses social"
+    ;
+}
+
+.projects-wrapper__title{
+    width: 30vw;
+    grid-area: title;
+    margin: 4vw;
+    position: relative;
+}
+
+.projects-wrapper__title img{
+    left: 3vw;
+    width: 18vw;
+    position: relative;
+}
+
+.projects-wrapper__title span{
+    font-weight: 600;
+    font-size: 4.5vw;
+    position: absolute;
+    left: 0vw;
+    top: 2vh;
+}
+
+.projects-wrapper__cash{
+    width: 90vw;
+    grid-area: cash;
+    margin: 0 auto;
+}
+
+.projects-wrapper__losses{
+    width: 40vw;
+    grid-area: losses;
+    margin: 5vw auto;
+}
+
+.projects-wrapper__social{
+    width: 40vw;
+    height: 30vh;
+    grid-area: social;
+    margin: 5vw auto;
+}
+
+.projects-wrapper__cash img, .projects-wrapper__losses img, .projects-wrapper__social img{
+    width: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.projects-wrapper__cash__text, .projects-wrapper__losses__text, .projects-wrapper__social__text{
+    width: 100%;
+    margin-top: 3vw;
+}
+
+.projects-wrapper__cash .title, .projects-wrapper__losses .title, .projects-wrapper__social .title{
+    font-weight: 500;
+    font-size: 2vw;
+}
+
+.projects-wrapper__cash .link, .projects-wrapper__losses .link, .projects-wrapper__social .link{
+    font-size: 2vw;
+    font-weight: 400;
+    margin-left: 2vw;
+}
+
+.projects-wrapper__cash .description, .projects-wrapper__losses .description, .projects-wrapper__social .description{
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: #A4A4A4;
+    text-align: justify;
+    margin: 1vw 0 3vw 0;
+}
+
+/* education */
+
+.education-wrapper{
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(5, auto);;
+}
+
+.education-wrapper__title{
+    width: 30vw;
+    margin: 4vw;
+    position: relative;
+}
+
+.education-wrapper__title img{
+    left: 3vw;
+    width: 18vw;
+    position: relative;
+}
+
+.education-wrapper__title span{
+    font-weight: 600;
+    font-size: 4.5vw;
+    position: absolute;
+    left: 0vw;
+    top: 2vh;
+}
+
+.education-wrapper__elem{
+    height: 10vw;
+    margin: 4vw;
+    position: relative;
+    font-weight: 500;
+    font-size: 2vw;
+}
+
+.education-wrapper__elem a{
+    margin-left: 3vw;
+}
+
+.education-wrapper__elem .description{
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: #A4A4A4;
+    text-align: justify;
+}
+
+/* media */
+
+@media screen and (max-width:1000px){
+    .about-wrapper{
+        min-height: 100vh;
+    }
+}
+
+/* Mobile portait */
+@media screen and (max-width:600px){
+    .about-wrapper{
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns:auto;
+        height: auto;
+        background-color: #FCD400;
+        position: relative;
+    }
+    .about-wrapper__photo{
+        grid-row-start: 2;
+    }
+    .about-wrapper__text{
+        grid-row-start: 1;
+    }
+    .about-wrapper__text__name{
+        margin-top: 6vh;
+        font-size: 5vh;
+    }
+    .about-wrapper__text__birth{
+        font-size: 3vh;
+    }
+    .about-wrapper__text__about{
+        font-size: 2.5vh;
+        padding: 40px;
+        margin: 0;
+    }
+    .about-wrapper__text__links span{
+        padding-top:20px;
+        display: block;
+        font-size: 2vh;
+        text-decoration: underline;
+    }
+}
+    
